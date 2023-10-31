@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://k9a204.p.ssafy.io:3306/journeymate?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: ssafy204
+    password: '{cipher}e5df870e5902428a47b3123416841e460499a3c039f26cfe6abdd8ab84fe79c4'
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        # show_sql: true
+        format_sql: true
+    open-in-view: false
+
+cloud:
+  aws:
+    s3:
+      bucket: journeymate-project
+    credentials:
+      access-key: '{cipher}681ae80896c15ef7b11f95ab59c6cc494d1b1e071986d11e02da4721ea56381cced29943136a06a4731254a66edcb12a'
+      secret-key: '{cipher}0a250071e4fac5682541ba2f6582964444eb7c2ba14f33bd9b07752339e939f65d75217ebe3353ad98c5195dc2a54af246b7162c1500e7914cfd755670881335'
+    region:
+      static: ap-northeast-2
+      auto: false
+    stack:
+      auto: false
